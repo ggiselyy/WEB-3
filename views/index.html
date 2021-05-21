@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="css/projeto1.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/buscar.js"async></script>
+        <script type="text/javascript" src="js/index.js"async></script>
+        <script type="text/javascript" src="js/hide.js"async></script>
+    </head>
+
+    <body>
+        <div>
+            <header>
+              <div>
+                <div>
+                     <img id="logo1" class="resize1" src="img/tumblr-logo-t.png" onclick="window.location.href= './index.html'"></img>
+                     <button id="btSearch" onclick="window.location.href= 'buscar'">Search</input>
+                     <button id="login1">Log in</button>
+                     <button id="Signup" onclick="window.location.href= 'signup'" >Sign up</button>
+                </div>
+             </div>
+            </header>
+        </div>
+            
+        <div class = "resto" id="resto">
+            <div id="logo2"><img class="resize" src= img/tumblr-logo.png></img></div>
+            <div id="frase">
+                 Make stuff, look at stuff, talk about stuff, find your people.
+            </div>
+            <div id="button-center">
+                <script type="text/javascript">
+                    function signup() {
+                      location.href="/signup"
+                    }
+                  </script>
+                <a button id="getStarted" onClick="signup()">Get Started</a button><br>
+                <a button id="login2">Log In</a button>
+            </div>
+
+            <div id="explore">
+                <a class="explore" href="#aexplore">Here's what's trending</a>
+            </div>
+        </div>
+
+        <div id="LoginDiv">
+            <form id="LoginForm"  method="POST" action="/signIn">
+                <div class="form-group">
+                    <label for="emaillogin"></label><span id="error-email"></span>
+                    <input id="emaillogin" name="email" placeholder= "Email"></input>
+                </div>
+                 <div class="form-group">
+                    <label for="senhalogin"></label><span id="error-password"></span>
+                    <input id="senhalogin" name="senha" placeholder= "Senha"></input>
+                </div>
+                <label for="botlogin"></label><span id="error-login"></span>
+                <div class="form-group">
+                     <button id="login3" type="submit" value="Entrar">Log In</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="apps">
+            <div class="app">
+                <a class="ios" href="#ios"><img src="img/ios.svg"><img></a>
+                <a class="android" href="#android"><img class="android" src="img/googleplay.png"></img></a>
+            </div>
+        </div>
+
+    </body>
+       
+</html>

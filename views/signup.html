@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="css/projeto1.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js" async></script>
+    </head>
+
+    <body>
+        <div>
+            <header>
+              <div>
+                <div>
+                    <img id="logo1" class="resize1" src="img/tumblr-logo-t.png" onclick="window.location.href= './index.html'"></img>
+                    <button id="btSearch" onclick="window.location.href= 'buscar.html'">Search</input>
+                    <button id="login1">Log in</button>
+                    <button id="Signup" onclick="window.location.href= 'signup.html'" >Sign up</button>
+
+                </div>
+             </div>
+            </header>
+        </div>
+            
+        <div class = "resto" id="resto">
+            <div id="logo2"><img class="resize" src= img/tumblr-logo.png></img></div>
+            <div id="frase">
+                 Make stuff, look at stuff, talk about stuff, find your people.
+            </div>
+
+            <div id="button-center">
+                <div class="form-group">
+                    <form id="Cadastro">
+                        <label for="nomelogin"></label><span id="error-name"></span>
+                        <input id="nomelogin" name="nomelogin" placeholder="Name"></input>
+                </div>
+
+                <div class="form-group"></div>
+                         <label for="emaillogin"></label><span id="error-email"></span>
+                        <input id="emaillogin" name="emaillogin" placeholder= "Email"></input>
+                </div>
+
+                <div class="form-group"></div>
+                        <label for="senhalogin"></label><span id="error-password"></span>
+                        <input id="senhalogin" name="senhalogin" placeholder="Password"></input>
+                </div>
+                <div class="form-group"></div>
+                <label for="login2"></label><span id="error-register"></span>
+                <button id="login2" type="submit" value="Adicionar">Sign Up</button>
+                </div>
+            </form>
+        </div>
+
+            <div id="explore">
+                <a class="explore" href="#aexplore">Here's what's trending</a>
+            </div>
+        </div>
+
+
+    </body>
+</html>
+
+
