@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="css/projeto1.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <header>
+              <div>
+                <div>
+                     <img id="logo1" class="resize1" src="img/tumblr-logo-t.png" onclick="window.location.href= './index.html'"></img>                </div>
+            </div>
+             <div>
+            <form method="post" action="/postagens/" enctype="multipart/form-data"> 
+                <label for="titulo">Titulo</label>
+                <li><input id="titulo", placeholder="Titulo"/></li>
+
+                <label for="imagemPost">Imagem</label>
+                <li><input id="imagemPost" name="imagem" type="file" /> </li>
+
+                <li><input type="submit" value="Salvar" /> </li>
+            </form>
+           </div>
+            </header>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function addNew() {
+            location.href="/postagens"
+        }
+    </script>
+       
+</html>

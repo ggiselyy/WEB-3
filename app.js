@@ -75,7 +75,7 @@ var sessionChecker = (req, res, next) => {
   };
 
 // Rota principal - Main route
-// Verifica se o usuário está logado, se estiver redireciona para o dashboard ao invés da página inicial
+// Verifica se o usuário está logado, se estiver redireciona para página inicial
 app.get("/", (req, res) => {
     if (req.session.user && req.cookies.user_sid) {
       res.redirect("/index");
@@ -85,12 +85,12 @@ app.get("/", (req, res) => {
   });
 
   // Rota principal quando logado - Main route when loggedin
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
     if (req.session.user && req.cookies.user_sid) {
       // carregar as postagens
-      PostagensController.listarPostagens(req, res);
-    } else {
-      res.redirect("/login");
+      //PostagensController.listarPostagens(req, res);
+  //  } else {
+  //    res.redirect("/signIn");
     }
   });
 // Rota de cadastro
@@ -98,7 +98,16 @@ app.route("/signup").get(sessionChecker, (req, res) => {
   res.sendFile(__dirname + "/views/signup.html");
 });
 
+//Rota de busca
+app.route("/buscar").get(sessionChecker, (req, res) => {
+  res.sendFile(__dirname + "/views/buscar.html");
+});
 
+//rota de nova postagem
+//Rota de busca
+app.route("/novaPost").get(sessionChecker, (req, res) => {
+  res.sendFile(__dirname + "/views/novaPost.html");
+});
 
   //Rota de busca - Search route
   app.get("/buscar", async (req, res) => {
@@ -159,15 +168,14 @@ app.post("/createUser", async (req, res) => {
           senha: req.body.senha
         };
         // Verifica se o nome de usuário já está em uso.
-        
-                new Usuarios(newUser)
-                  .save()
-                  .then(() => {
-                    console.log("Cadastro realizado com sucesso!");
-                    res.send({ msg: "Cadastro realizado com sucesso!" });
-                  })
-              }
-            });
+          new Usuarios(newUser)
+            .save()
+            .then(() => {
+              console.log("Cadastro realizado com sucesso!");
+              res.send({ msg: "Cadastro realizado com sucesso!" });
+            })
+        }
+      });
 
   //listen porta
 const PORT = process.env.PORT || 5000;

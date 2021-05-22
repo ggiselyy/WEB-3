@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head> 
-        <link rel="stylesheet" type="text/css" href="public/css/projeto1.css">
+        <link rel="stylesheet" type="text/css" href="css/projeto1.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type="text/javascript" src="script/buscar.js"async></script>
+        <script type="text/javascript" src="js/buscar.js"async></script>
     </head>
 
     <body>
@@ -11,12 +11,21 @@
             <header>
               <div>
                 <div>
-                     <img id="logo1" class="resize1" src="img/tumblr-logo-t.png" onclick="window.location.href= './index.html'"></img>
+                     <img id="logo1" class="resize1" src="img/tumblr-logo-t.png" onclick="window.location.href= '/'"></img>
                      <input id="inputSearch" type="text" name="Search Tumblr" placeholder="Search Tumblr"></input>
 
                      <div class="search">
                          <label for="btSearch"></label><span id="error-buscar"></span>
                          <button id="btSearch">Search</input>
+                        <script type="text/javascript">
+                            function buscar() {
+                                location.href="/buscar"
+                            }
+                            function addNew() {
+                                location.href="/novaPost"
+                            }
+                            </script>
+                            <button id="newPost" onClick="addNew()">New Post</button>
                      </div>
 
                     
@@ -26,6 +35,5 @@
             </header>
         </div>
 
-    </body>
-       
+    </body>       
 </html>

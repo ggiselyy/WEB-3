@@ -36,8 +36,23 @@ input, #inputSearch {
     height: 35px;
     float: left;
 }
+#titulo{
+    display: flex;
+    width: 300px;
+    height: 30px;
+    margin-top: 500;
+    margin-left: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;   /*centraliza verticalmente*/
+    justify-content: center; /* centraliza horizontalmente*/
+    font-weight: bold;
+    border-width: 0px;
+    border-radius: 3px;
+    font-size: 13pt;
+}
 
-#btSearch {
+
+#btSearch, #newPost {
     margin-top: 0.5%;
     margin-left: 0.5%;
     margin-right: 80%;

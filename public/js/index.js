@@ -3,7 +3,6 @@
 $(function() {
   $("#login3").click(function(event) {
     event.preventDefault();
-    alert("oilogin")
 
     // Gets the form data
     let email = $("input#emaillogin").val();
@@ -67,7 +66,8 @@ $(function() {
 
     $("btSearch").click(function(event) {
       event.preventDefault();
-  let wrapper = document.getElementById("inputSearch");
+      let searchTerm = field.value;
+      let wrapper = document.getElementById("inputSearch");
 
   $.ajax({
     type: "GET",
@@ -77,20 +77,20 @@ $(function() {
     },
     success: function(result) {
       console.log(result);
-      let content = ``;
-      for (let i = 0; i < result.length; i++) {
-        content += `<div class="telatoda">
-            <div class="other-images">
-              <div>
-                <img src="upload/${result[i].conteudo}">
-              </div>
-            </div>
-            <div class="texto">
-              <p>${result[i].titulo}</p>
-            </div>
-          </div>`;
-      }
-      wrapper.innerHTML = content;
+     // let content = ``;
+     // for (let i = 0; i < result.length; i++) {
+     //   content += `<div class="telatoda">
+      //      <div class="other-images">
+      //       <div>
+      //          <img src="upload/${result[i].conteudo}">
+      //        </div>
+      //      </div>
+      //      <div class="texto">
+      //        <p>${result[i].titulo}</p>
+       //     </div>
+       //   </div>`;
+     // }
+     // wrapper.innerHTML = content;
     }
   });
 })
